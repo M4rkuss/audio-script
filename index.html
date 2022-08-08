@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Audio Script</title>
+    <style>
+        html, body, * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .buttons {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .buttons a {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #000;
+        }
+        .buttons a:hover {
+            cursor: pointer;
+        }
+        .buttons a:not(:last-child) {
+            margin-right: 10px;
+        }
+        .dark-block {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 10;
+            display: none;
+        }
+        .start-modal {
+            background: #fff;
+            border-radius: 16px;
+            padding: 50px;
+            position: relative;
+            z-index: 20;
+            width: 40%;
+            margin: 0 auto;
+            text-align: center;
+            display: none;
+        }
+        .start-modal-buttons {
+            margin-top: 40px;
+        }
+        .start-modal-buttons button {
+            outline: none;
+            border: 1px solid #000;
+            border-radius: 8px;
+            padding: 10px 20px;
+        }
+        .start-modal-buttons button:hover {
+            cursor: pointer;
+        }
+        .start-modal-buttons button:first-child {
+            margin-right: 55px;
+        }
+        .overflow-hidden {
+            overflow: hidden; !important;
+        }
+    </style>
+</head>
+<body id="body">
+
+<div class="buttons">
+    <a id="1">
+        1
+        <audio id="audioFirst" controls="" name="media" preload="auto" hidden>
+            <source src="ocheret.mp3" type="audio/mp3">
+        </audio>
+    </a>
+    <a id="2">
+        2
+        <audio id="audioSecond" controls="" name="media" preload="auto" hidden>
+            <source src="na-chistotu.mp3" type="audio/mp3">
+        </audio>
+    </a>
+    <a id="3">
+        3
+        <audio id="audioThird" controls="" name="media" preload="auto" hidden>
+            <source src="true-love.mp3" type="audio/mp3">
+        </audio>
+    </a>
+</div>
+
+
+
+<div class="start-modal">
+    <h2>Увімкнути звук?</h2>
+    <div class="start-modal-buttons">
+        <button id="onSoundBtn">Так</button>
+        <button id="offSoundBtn">Ні</button>
+    </div>
+</div>
+
+<div class="dark-block"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
